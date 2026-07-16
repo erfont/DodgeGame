@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spinner : MonoBehaviour
 {
-     [SerializeField] float xAngle, yAngle, zAngle;
+     [SerializeField] float xAngle = 0f, yAngle = 10f, zAngle = 0f;
     // float [SerializeField] yAngle;
     // float [SerializeField] zAngle;
 
@@ -15,6 +15,6 @@ public class Spinner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(xAngle, yAngle, zAngle);
+        transform.Rotate(xAngle* Time.deltaTime, yAngle* Time.deltaTime, zAngle* Time.deltaTime);
     }
 }
